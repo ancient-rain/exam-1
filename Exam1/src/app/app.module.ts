@@ -7,6 +7,62 @@ import { ListComponent } from './+list/list.component';
 import { RandomComponent } from './+random/random.component';
 import { SigninComponent } from './+signin/signin.component';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+import {
+  MdAutocompleteModule,
+  MdButtonModule,
+  MdButtonToggleModule,
+  MdCardModule,
+  MdCheckboxModule,
+  MdDialogModule,
+  MdGridListModule,
+  MdIconModule,
+  MdInputModule,
+  MdListModule,
+  MdMenuModule,
+  MdProgressBarModule,
+  MdProgressSpinnerModule,
+  MdRadioModule,
+  MdRippleModule,
+  MdSelectModule,
+  MdSidenavModule,
+  MdSliderModule,
+  MdSlideToggleModule,
+  MdSnackBarModule,
+  MdTabsModule,
+  MdToolbarModule,
+  MdTooltipModule
+} from '@angular/material';
+
+
+export const MaterialModules = [
+  MdAutocompleteModule,
+  MdButtonModule,
+  MdButtonToggleModule,
+  MdCardModule,
+  MdCheckboxModule,
+  MdDialogModule,
+  MdGridListModule,
+  MdIconModule,
+  MdInputModule,
+  MdListModule,
+  MdMenuModule,
+  MdProgressBarModule,
+  MdProgressSpinnerModule,
+  MdRadioModule,
+  MdRippleModule,
+  MdSelectModule,
+  MdSidenavModule,
+  MdSliderModule,
+  MdSlideToggleModule,
+  MdSnackBarModule,
+  MdTabsModule,
+  MdToolbarModule,
+  MdTooltipModule,
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +72,10 @@ import { SigninComponent } from './+signin/signin.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModules,
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
