@@ -12,7 +12,7 @@
   </form>
 </md-card>
 <br>
-<md-card fxLayoutAlign="none center" *ngFor="let word of (wordStream | async)">
+<md-card fxLayoutAlign="none center" *ngFor="let word of (wordStream | async) | reverse">
   <span><b>{{ word.abbr }}</b></span>
   <span fxFlex></span>
   <span>{{ word.name }}</span>
