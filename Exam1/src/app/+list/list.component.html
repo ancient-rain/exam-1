@@ -1,23 +1,22 @@
 <md-card>
-  <form>
+  <form (ngSubmit)="onSubmit()" #listForm="ngForm">
     <md-input-container>
       <input mdInput type="text" [(ngModel)]="word.abbr" placeholder="Abbreviation" name="abbreviation">
     </md-input-container>
     <md-input-container>
       <input mdInput type="text" [(ngModel)]="word.name" placeholder="Full name" name="fullName">
     </md-input-container>
-    <md-card-actions>
-      <span fxFlex></span>
+    <md-card-actions fxLayoutAlign="end center">
       <button md-button type="submit">Save</button>
     </md-card-actions>
   </form>
 </md-card>
 <br>
-<md-card fxLayoutAlign="none center">
-  <span><b>EE</b></span>
+<md-card fxLayoutAlign="none center" *ngFor="let word of (wordStream | async)">
+  <span><b>{{ word.abbr }}</b></span>
   <span fxFlex></span>
-  <span>Electrical Engineering</span>
-  <button md-icon-button>
+  <span>{{ word.name }}</span>
+  <button md-icon-button (click)="remove(word.$key)">
     <md-icon>delete</md-icon>
   </button>
 </md-card>
