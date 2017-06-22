@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireDatabase, FirebaseListObservable } from "angularfire2/database";
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
-interface word {
+interface Word {
   abbr: string;
   name: string;
   $key?: string;
@@ -21,9 +21,9 @@ export class ListComponent implements OnInit {
     'name': ''
   }
 
-  wordStream: FirebaseListObservable<word[]>;
+  wordStream: FirebaseListObservable<Word[]>;
 
-  constructor(db: AngularFireDatabase) { 
+  constructor(db: AngularFireDatabase) {
     this.wordStream = db.list(this.wordPath);
   }
 

@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute, Params } from "@angular/router";
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-random',
@@ -27,7 +27,7 @@ export class RandomComponent implements OnInit, OnDestroy {
           this.message = 'True';
         }
       } else {
-          this.max = parseInt(`${num}`);
+          this.max = parseInt(`${num}`, 10);
           this.randomNumber = Math.floor(Math.random() * this.max);
           this.message = 'Your random value is ' + this.randomNumber + '.';
       }
